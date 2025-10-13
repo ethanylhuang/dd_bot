@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<robot name="dd_bot" xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:include filename="robot_core.xacro"/>
+</robot>
