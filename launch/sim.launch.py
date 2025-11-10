@@ -37,7 +37,14 @@ def generate_launch_description():
                 'gz_sim.launch.py'
             )
         ),
-        launch_arguments={'gz_args': '-r empty.sdf'}.items()
+        launch_arguments={'gz_args': '-r -v4 empty.sdf'}.items()
+    )
+
+    clock_bridge = Node(
+        package="ros_gz_bridge",
+        executable="parameter_bridge",
+        arguments=["/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock"],
+        output="screen",
     )
 
     spawn = Node(
@@ -51,9 +58,11 @@ def generate_launch_description():
         output='screen'
     )
 
+
     return LaunchDescription([
         DeclareLaunchArgument('use_sim_time', default_value='true'),
         gz_launch,
         rsp,
+        clock_bridge,
         spawn
     ])
