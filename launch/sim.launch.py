@@ -58,11 +58,26 @@ def generate_launch_description():
         output='screen'
     )
 
+    diff_drive_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["diff_cont"]
+    )
+
+    joint_broad_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["joint_broad"]
+    )
+
+
 
     return LaunchDescription([
         DeclareLaunchArgument('use_sim_time', default_value='true'),
         gz_launch,
         rsp,
         clock_bridge,
-        spawn
+        spawn,
+        diff_drive_spawner,
+        joint_broad_spawner
     ])

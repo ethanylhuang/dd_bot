@@ -19,6 +19,7 @@
   <depend>ros_gz_sim</depend>
   <depend>gz_ros2_control</depend>
   <depend>ros2_controllers</depend>
+  <depend>twist_stamper</depend>
   
   <export>
     <build_type>ament_python</build_type>
