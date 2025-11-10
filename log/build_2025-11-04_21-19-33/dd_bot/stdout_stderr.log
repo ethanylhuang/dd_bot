@@ -1,0 +1,30 @@
+running develop
+running egg_info
+creating dd_bot.egg-info
+writing dd_bot.egg-info/PKG-INFO
+writing dependency_links to dd_bot.egg-info/dependency_links.txt
+writing requirements to dd_bot.egg-info/requires.txt
+writing top-level names to dd_bot.egg-info/top_level.txt
+writing manifest file 'dd_bot.egg-info/SOURCES.txt'
+reading manifest file 'dd_bot.egg-info/SOURCES.txt'
+writing manifest file 'dd_bot.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/dev/ros2/dd_bot/install/dd_bot/lib/python3.12/site-packages/dd-bot.egg-link (link to .)
+
+Installed /home/dev/ros2/dd_bot/build/dd_bot
+running symlink_data
+creating /home/dev/ros2/dd_bot/install/dd_bot/share/ament_index
+creating /home/dev/ros2/dd_bot/install/dd_bot/share/ament_index/resource_index
+creating /home/dev/ros2/dd_bot/install/dd_bot/share/ament_index/resource_index/packages
+symbolically linking /home/dev/ros2/dd_bot/build/dd_bot/resource/dd_bot -> /home/dev/ros2/dd_bot/install/dd_bot/share/ament_index/resource_index/packages
+symbolically linking /home/dev/ros2/dd_bot/build/dd_bot/package.xml -> /home/dev/ros2/dd_bot/install/dd_bot/share/dd_bot
+creating /home/dev/ros2/dd_bot/install/dd_bot/share/dd_bot/launch
+symbolically linking /home/dev/ros2/dd_bot/build/dd_bot/launch/sim.launch.py -> /home/dev/ros2/dd_bot/install/dd_bot/share/dd_bot/launch
+symbolically linking /home/dev/ros2/dd_bot/build/dd_bot/launch/rsp.launch.py -> /home/dev/ros2/dd_bot/install/dd_bot/share/dd_bot/launch
+creating /home/dev/ros2/dd_bot/install/dd_bot/share/dd_bot/urdf
+symbolically linking /home/dev/ros2/dd_bot/build/dd_bot/urdf/inertial_macros.xacro -> /home/dev/ros2/dd_bot/install/dd_bot/share/dd_bot/urdf
+symbolically linking /home/dev/ros2/dd_bot/build/dd_bot/urdf/robot.urdf.xacro -> /home/dev/ros2/dd_bot/install/dd_bot/share/dd_bot/urdf
+symbolically linking /home/dev/ros2/dd_bot/build/dd_bot/urdf/robot_core.xacro -> /home/dev/ros2/dd_bot/install/dd_bot/share/dd_bot/urdf
+symbolically linking /home/dev/ros2/dd_bot/build/dd_bot/urdf/ros2_control.xacro -> /home/dev/ros2/dd_bot/install/dd_bot/share/dd_bot/urdf
+creating /home/dev/ros2/dd_bot/install/dd_bot/share/dd_bot/config
+symbolically linking /home/dev/ros2/dd_bot/build/dd_bot/config/view_bot.rviz -> /home/dev/ros2/dd_bot/install/dd_bot/share/dd_bot/config

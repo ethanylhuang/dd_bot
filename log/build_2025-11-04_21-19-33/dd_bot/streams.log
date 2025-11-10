@@ -1,0 +1,32 @@
+[0.271s] Invoking command in '/home/dev/ros2/dd_bot/build/dd_bot': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/dev/ros2/dd_bot/build/dd_bot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dev/ros2/dd_bot/install/dd_bot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/dev/ros2/dd_bot/build/dd_bot/build --no-deps symlink_data
+[0.378s] running develop
+[0.441s] running egg_info
+[0.441s] creating dd_bot.egg-info
+[0.446s] writing dd_bot.egg-info/PKG-INFO
+[0.446s] writing dependency_links to dd_bot.egg-info/dependency_links.txt
+[0.447s] writing requirements to dd_bot.egg-info/requires.txt
+[0.447s] writing top-level names to dd_bot.egg-info/top_level.txt
+[0.447s] writing manifest file 'dd_bot.egg-info/SOURCES.txt'
+[0.458s] reading manifest file 'dd_bot.egg-info/SOURCES.txt'
+[0.459s] writing manifest file 'dd_bot.egg-info/SOURCES.txt'
+[0.464s] running build_ext
+[0.464s] Creating /home/dev/ros2/dd_bot/install/dd_bot/lib/python3.12/site-packages/dd-bot.egg-link (link to .)
+[0.465s] 
+[0.465s] Installed /home/dev/ros2/dd_bot/build/dd_bot
+[0.465s] running symlink_data
+[0.465s] creating /home/dev/ros2/dd_bot/install/dd_bot/share/ament_index
+[0.465s] creating /home/dev/ros2/dd_bot/install/dd_bot/share/ament_index/resource_index
+[0.465s] creating /home/dev/ros2/dd_bot/install/dd_bot/share/ament_index/resource_index/packages
+[0.465s] symbolically linking /home/dev/ros2/dd_bot/build/dd_bot/resource/dd_bot -> /home/dev/ros2/dd_bot/install/dd_bot/share/ament_index/resource_index/packages
+[0.465s] symbolically linking /home/dev/ros2/dd_bot/build/dd_bot/package.xml -> /home/dev/ros2/dd_bot/install/dd_bot/share/dd_bot
+[0.466s] creating /home/dev/ros2/dd_bot/install/dd_bot/share/dd_bot/launch
+[0.466s] symbolically linking /home/dev/ros2/dd_bot/build/dd_bot/launch/sim.launch.py -> /home/dev/ros2/dd_bot/install/dd_bot/share/dd_bot/launch
+[0.466s] symbolically linking /home/dev/ros2/dd_bot/build/dd_bot/launch/rsp.launch.py -> /home/dev/ros2/dd_bot/install/dd_bot/share/dd_bot/launch
+[0.466s] creating /home/dev/ros2/dd_bot/install/dd_bot/share/dd_bot/urdf
+[0.466s] symbolically linking /home/dev/ros2/dd_bot/build/dd_bot/urdf/inertial_macros.xacro -> /home/dev/ros2/dd_bot/install/dd_bot/share/dd_bot/urdf
+[0.466s] symbolically linking /home/dev/ros2/dd_bot/build/dd_bot/urdf/robot.urdf.xacro -> /home/dev/ros2/dd_bot/install/dd_bot/share/dd_bot/urdf
+[0.466s] symbolically linking /home/dev/ros2/dd_bot/build/dd_bot/urdf/robot_core.xacro -> /home/dev/ros2/dd_bot/install/dd_bot/share/dd_bot/urdf
+[0.466s] symbolically linking /home/dev/ros2/dd_bot/build/dd_bot/urdf/ros2_control.xacro -> /home/dev/ros2/dd_bot/install/dd_bot/share/dd_bot/urdf
+[0.466s] creating /home/dev/ros2/dd_bot/install/dd_bot/share/dd_bot/config
+[0.467s] symbolically linking /home/dev/ros2/dd_bot/build/dd_bot/config/view_bot.rviz -> /home/dev/ros2/dd_bot/install/dd_bot/share/dd_bot/config
+[0.479s] Invoked command in '/home/dev/ros2/dd_bot/build/dd_bot' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/dev/ros2/dd_bot/build/dd_bot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dev/ros2/dd_bot/install/dd_bot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/dev/ros2/dd_bot/build/dd_bot/build --no-deps symlink_data

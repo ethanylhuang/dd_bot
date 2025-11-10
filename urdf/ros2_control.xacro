@@ -1,4 +1,8 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-
+    <ros2_control name="GazeboSystem" type="system">
+        <hardware>
+            <plugin></plugin>
+        </hardware>
+    </ros2_control>
 </robot>
