@@ -1,0 +1,1 @@
+error: [Errno 17] File exists: '/home/etem/ros2/dd_bot/build/dd_bot/resource/dd_bot' -> '/home/etem/ros2/dd_bot/install/dd_bot/share/ament_index/resource_index/packages/dd_bot'

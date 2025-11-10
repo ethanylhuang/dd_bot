@@ -16,8 +16,8 @@
   <depend>robot_state_publisher</depend>
   <depend>joint_state_publisher</depend>
   <depend>joint_state_publisher_gui</depend>
-  <depend>gazebo_ros</depend>
-  <depend>ros2_control</depend>
+  <depend>ros_gz_sim</depend>
+  <depend>gz_ros2_control</depend>
   <depend>ros2_controllers</depend>
   
   <export>

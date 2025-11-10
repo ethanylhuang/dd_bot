@@ -1,0 +1,16 @@
+running develop
+running egg_info
+creating dd_bot.egg-info
+writing dd_bot.egg-info/PKG-INFO
+writing dependency_links to dd_bot.egg-info/dependency_links.txt
+writing requirements to dd_bot.egg-info/requires.txt
+writing top-level names to dd_bot.egg-info/top_level.txt
+writing manifest file 'dd_bot.egg-info/SOURCES.txt'
+reading manifest file 'dd_bot.egg-info/SOURCES.txt'
+writing manifest file 'dd_bot.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/etem/ros2/dd_bot/install/dd_bot/lib/python3.12/site-packages/dd-bot.egg-link (link to .)
+
+Installed /home/etem/ros2/dd_bot/build/dd_bot
+running symlink_data
+symbolically linking /home/etem/ros2/dd_bot/build/dd_bot/resource/dd_bot -> /home/etem/ros2/dd_bot/install/dd_bot/share/ament_index/resource_index/packages
