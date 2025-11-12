@@ -4,13 +4,14 @@ from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import LaunchConfiguration
+from launch.substitutions import LaunchConfiguration, TextSubstitution
 from launch_ros.actions import Node
 
 import xacro
 
 
 def generate_launch_description():
+    package_name = "dd_bot"
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
 
     pkg_path = get_package_share_directory('dd_bot')
@@ -21,6 +22,19 @@ def generate_launch_description():
     with open(urdf_file, 'w') as f:
         f.write(urdf)
 
+    default_world = os.path.join(
+        get_package_share_directory(package_name),
+        'worlds',
+        'empty_custom.world'
+    )    
+    
+    world = LaunchConfiguration('world')
+        
+    world_arg = DeclareLaunchArgument(
+        'world',
+        default_value=default_world,
+        description='World to load'
+    )
 
     rsp = Node(
         package='robot_state_publisher',
@@ -37,7 +51,9 @@ def generate_launch_description():
                 'gz_sim.launch.py'
             )
         ),
-        launch_arguments={'gz_args': '-r -v4 empty.sdf'}.items()
+        launch_arguments={
+            'gz_args': [TextSubstitution(text='-r -v4 '), world]
+        }.items()
     )
 
     clock_bridge = Node(
@@ -51,7 +67,6 @@ def generate_launch_description():
         package='ros_gz_sim',
         executable='create',
         arguments=[
-            '-world', 'empty',
             '-name', 'dd_bot',
             '-file', urdf_file
         ],
@@ -74,6 +89,7 @@ def generate_launch_description():
 
     return LaunchDescription([
         DeclareLaunchArgument('use_sim_time', default_value='true'),
+        world_arg,
         gz_launch,
         rsp,
         clock_bridge,
