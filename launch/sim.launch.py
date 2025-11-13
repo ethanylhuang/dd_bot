@@ -56,12 +56,13 @@ def generate_launch_description():
         }.items()
     )
 
-    clock_bridge = Node(
-        package="ros_gz_bridge",
-        executable="parameter_bridge",
-        arguments=["/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock"],
-        output="screen",
-    )
+    # manual bridge clock
+    # clock_bridge = Node(
+    #     package="ros_gz_bridge",
+    #     executable="parameter_bridge",
+    #     arguments=["/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock"],
+    #     output="screen",
+    # )
 
     spawn = Node(
         package='ros_gz_sim',
@@ -85,15 +86,31 @@ def generate_launch_description():
         arguments=["joint_broad"]
     )
 
+    bridge_params = os.path.join(get_package_share_directory(package_name),'config','gz_bridge.yaml')
+    ros_gz_bridge = Node(
+        package="ros_gz_bridge",
+        executable="parameter_bridge",
+        arguments=[
+            '--ros-args',
+            '-p',
+            f'config_file:={bridge_params}',
+        ]
+    )
 
+    ros_gz_image_bridge = Node(
+        package="ros_gz_image",
+        executable="image_bridge",
+        arguments=["/camera/image_raw"]
+    )
 
     return LaunchDescription([
         DeclareLaunchArgument('use_sim_time', default_value='true'),
         world_arg,
         gz_launch,
         rsp,
-        clock_bridge,
         spawn,
         diff_drive_spawner,
-        joint_broad_spawner
+        joint_broad_spawner,
+        ros_gz_bridge,
+        ros_gz_image_bridge
     ])
