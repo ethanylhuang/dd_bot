@@ -20,6 +20,7 @@
   <depend>gz_ros2_control</depend>
   <depend>ros2_controllers</depend>
   <depend>twist_stamper</depend>
+  <depend>slam_toolbox</depend>
   
   <export>
     <build_type>ament_python</build_type>
