@@ -1,0 +1,132 @@
+<sdf version='1.10'>
+  <world name='empty'>
+    <physics name='1ms' type='ignored'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <plugin name='gz::sim::systems::Physics' filename='gz-sim-physics-system'/>
+    <plugin name='gz::sim::systems::UserCommands' filename='gz-sim-user-commands-system'/>
+    <plugin name='gz::sim::systems::SceneBroadcaster' filename='gz-sim-scene-broadcaster-system'/>
+    <plugin name='gz::sim::systems::Sensors' filename='gz-sim-sensors-system'>
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <plugin name='gz::sim::systems::Contact' filename='gz-sim-contact-system'/>
+    <gravity>0 0 -9.8000000000000007</gravity>
+    <magnetic_field>5.5644999999999998e-06 2.2875799999999999e-05 -4.2388400000000002e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <scene>
+      <ambient>0.400000006 0.400000006 0.400000006 1</ambient>
+      <background>0.699999988 0.699999988 0.699999988 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <model name='ground_plane'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.800000012 0.800000012 0.800000012 1</ambient>
+            <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+            <specular>0.800000012 0.800000012 0.800000012 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0 0 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <include>
+      <uri>file:///tmp</uri>
+      <name>dd_bot</name>
+      <pose>-0.059684036510780698 1.0935332570999121 0.049999692555734991 1.790380875030944e-09 -1.0512689474644365e-06 -0.0047804174299110134</pose>
+    </include>
+    <include>
+      <uri>file:///home/etem/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <name>Construction Cone</name>
+      <pose>1.2592377768028298 1.2098515979186901 -1.3379350696784975e-11 1.8431436932253577e-21 -1.463672932855431e-21 -1.348879767568575e-42</pose>
+    </include>
+    <include>
+      <uri>file:///home/etem/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <name>Construction Cone_0</name>
+      <pose>0.71144378754597004 -0.64968451753230505 -1.337980619769459e-09 2.0015059864021179e-16 6.3280774481220797e-17 -0.00077523616918005538</pose>
+    </include>
+    <include>
+      <uri>file:///home/etem/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <name>Construction Cone_1</name>
+      <pose>2.2035350291366287 0.014046642103376793 -1.3411854024460471e-09 -3.8662065792341909e-12 9.3867054855216282e-10 0.0015080610025818384</pose>
+    </include>
+    <include>
+      <uri>file:///home/etem/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <name>Construction Cone_2</name>
+      <pose>2.550584725085316 -1.302504210552998 -1.3379350698519699e-11 9.2157184661267884e-22 -2.7105054312137611e-22 -1.2489627477486806e-43</pose>
+    </include>
+    <include>
+      <uri>file:///home/etem/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <name>Construction Cone_3</name>
+      <pose>0.78752256101534357 -1.7115785183988614 -1.3379350698519699e-11 1.8973538018496329e-21 -1.81603863891322e-21 -1.7228339079239153e-42</pose>
+    </include>
+    <include>
+      <uri>file:///home/etem/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <name>Construction Cone_4</name>
+      <pose>-0.83139038927710684 -0.00326210512563746 -1.3379350698519699e-11 9.2157184661267884e-22 -7.5894152073985303e-22 -3.4970956936963051e-43</pose>
+    </include>
+    <include>
+      <uri>file:///home/etem/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <name>Construction Cone_5</name>
+      <pose>0.39132088572675072 0.99727677905577239 -7.4753648120165367e-09 -2.8913976781762738e-08 -8.6821489179258533e-09 -0.0047805426946407464</pose>
+    </include>
+    <light name='sun' type='directional'>
+      <pose>0 0 10 0 0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1</intensity>
+      <direction>-0.5 0.10000000000000001 -0.90000000000000002</direction>
+      <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+      <specular>0.200000003 0.200000003 0.200000003 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <linear>0.01</linear>
+        <constant>0.90000000000000002</constant>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+  </world>
+</sdf>
