@@ -25,7 +25,7 @@ def generate_launch_description():
     default_world = os.path.join(
         get_package_share_directory(package_name),
         'worlds',
-        'empty_custom.world'
+        'cones.sdf'
     )    
     
     world = LaunchConfiguration('world')
@@ -103,6 +103,21 @@ def generate_launch_description():
         arguments=["/camera/image_raw"]
     )
 
+    slam_params = os.path.join(get_package_share_directory(package_name), 'config', 'mapper_params_online_async.yaml')
+    slam_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(
+                get_package_share_directory('slam_toolbox'),
+                'launch',
+                'online_async_launch.py'
+            )
+        ),
+        launch_arguments={
+            'slam_params_file': slam_params,
+            'use_sim_time': 'true',
+        }.items(),
+    )
+
     return LaunchDescription([
         DeclareLaunchArgument('use_sim_time', default_value='true'),
         world_arg,
@@ -112,5 +127,6 @@ def generate_launch_description():
         diff_drive_spawner,
         joint_broad_spawner,
         ros_gz_bridge,
-        ros_gz_image_bridge
+        ros_gz_image_bridge,
+        slam_launch
     ])

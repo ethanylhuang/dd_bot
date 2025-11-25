@@ -21,7 +21,7 @@ setup(
         # ADD THIS LINE to install the config files
         (os.path.join('share', package_name, 'config'), glob('config/*')),
 
-        ('share/' + package_name + '/worlds', glob('worlds/*.world')),
+        ('share/' + package_name + '/worlds', glob('worlds/*')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,

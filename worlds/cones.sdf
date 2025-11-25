@@ -70,11 +70,6 @@
       <self_collide>false</self_collide>
     </model>
     <include>
-      <uri>file:///tmp</uri>
-      <name>dd_bot</name>
-      <pose>-0.059684036510780698 1.0935332570999121 0.049999692555734991 1.790380875030944e-09 -1.0512689474644365e-06 -0.0047804174299110134</pose>
-    </include>
-    <include>
       <uri>file:///home/etem/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
       <name>Construction Cone</name>
       <pose>1.2592377768028298 1.2098515979186901 -1.3379350696784975e-11 1.8431436932253577e-21 -1.463672932855431e-21 -1.348879767568575e-42</pose>

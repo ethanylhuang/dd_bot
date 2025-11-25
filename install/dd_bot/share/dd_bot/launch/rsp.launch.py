@@ -1,1 +1,0 @@
-/home/dev/ros2/dd_bot/build/dd_bot/launch/rsp.launch.py
