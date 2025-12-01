@@ -14,7 +14,7 @@ def generate_launch_description():
         name='teleop_twist_keyboard',
         prefix=['xterm ', '-e'],
         parameters=[{'use_sim_time': use_sim_time}],
-        remappings=[('/cmd_vel', '/diff_cont/cmd_vel_unstamped')],
+        remappings=[('/cmd_vel', '/cmd_vel_teleop')],
         output='screen'
     )
 
