@@ -28,6 +28,7 @@
   
   <export>
     <build_type>ament_python</build_type>
+    <ros_gz_sim gazebo_model_path="${prefix}/models"/>
   </export>
 
 </package>
