@@ -119,13 +119,13 @@ def generate_launch_description():
         }.items(),
     )
 
-    # twist_mux_params = os.path.join(get_package_share_directory(package_name), 'config', 'twist_mux.yaml')
-    # twist_mux = Node(
-    #     package="twist_mux",
-    #     executable="twist_mux",
-    #     parameters=[twist_mux_params, {"use_sim_time": "true"}],
-    #     remappings=[("/cmd_vel_out", "/diff_cont/cmd_vel_unstamped")]
-    # )
+    twist_mux_params = os.path.join(get_package_share_directory(package_name), 'config', 'twist_mux.yaml')
+    twist_mux = Node(
+        package="twist_mux",
+        executable="twist_mux",
+        parameters=[twist_mux_params, {"use_sim_time": True}],
+        remappings=[("/cmd_vel_out", "/diff_cont/cmd_vel_unstamped")]
+    )
 
     return LaunchDescription([
         DeclareLaunchArgument('use_sim_time', default_value='true'),
@@ -138,5 +138,5 @@ def generate_launch_description():
         ros_gz_bridge,
         ros_gz_image_bridge,
         # slam_launch,
-        # twist_mux
+        twist_mux
     ])
